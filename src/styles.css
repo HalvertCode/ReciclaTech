@@ -605,13 +605,13 @@ strong {
 }
 
 .site-header.section-padding {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .site-header.section-padding-img {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .header-image {
@@ -837,8 +837,8 @@ section {
 }
 
 .section-padding {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .featured {
