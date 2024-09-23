@@ -82,14 +82,10 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "src/img",
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/img",
-                "output": "/img"
               }
             ],
             "styles": [
