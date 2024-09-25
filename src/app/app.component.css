@@ -1,0 +1,67 @@
+/* Navbar */
+.navbar {
+    background-color: #a1cc00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  .main-content {
+    padding: 20px;
+  }
+  
+  .info-section {
+    margin-bottom: 20px;
+  }
+  
+  .accordion-item h2 {
+    background-color: #e6e6e6;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+  
+  /* Sponsors */
+  .sponsors-section {
+    margin-top: 20px;
+  }
+  
+  .sponsors img {
+    margin: 10px;
+    height: 50px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #a1cc00;
+    text-align: center;
+    padding: 10px;
+    color: white;
+  }  
