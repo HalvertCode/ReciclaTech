@@ -1,3 +1,36 @@
-.collapse {
-  transition: height 0.3s ease;
+.navbar-brand {
+  display: flex;
+  align-items: center;
 }
+
+.navbar-brand strong {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.navbar-brand img {
+  max-height: 80px;
+  width: auto;
+}
+
+.navbar {
+  padding: 10px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link.active {
+  color: black;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+

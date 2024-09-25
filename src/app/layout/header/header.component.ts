@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgbDropdown, NgbDropdownMenu, NgbDropdownToggle} from "@ng-bootstrap/ng-bootstrap";
 import {NgClass} from "@angular/common";
 
@@ -11,7 +11,8 @@ import {NgClass} from "@angular/common";
     NgbDropdown,
     NgbDropdownMenu,
     NgbDropdownToggle,
-    NgClass
+    NgClass,
+    RouterLinkActive
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-inicio',
@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
+export class InicioComponent implements OnInit{
+  ngOnInit() {
+    const items = document.querySelectorAll('.accordion-item h2');
 
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        if (parent) {  // Add a null check here
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  }
 }
