@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-proyectos',
+  selector: 'app-proyecto',
   standalone: true,
   imports: [
 
@@ -10,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './proyectos.component.css'
 })
 export class ProyectosComponent {
-  imagePath= 'img/proyectos/000467338W.png';
+  imagePath= 'img/proyecto/proyecto2.png';
 }
