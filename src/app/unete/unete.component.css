@@ -1,0 +1,18 @@
+.color-change-button {
+  background-color: #000000; /* Color de fondo inicial */
+  color: white; /* Color del texto */
+  padding: 15px 32px; /* Espaciado */
+  text-align: center; /* Alinear texto al centro */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Para que el botón se ajuste al contenido */
+  font-size: 16px; /* Tamaño de la fuente */
+  margin: 4px 2px; /* Margen */
+  cursor: pointer; /* Cambia el cursor a un puntero */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.color-change-button:hover {
+  background-color: #45a049; /* Nuevo color de fondo al pasar el cursor */
+}
