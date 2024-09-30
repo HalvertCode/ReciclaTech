@@ -1,6 +1,22 @@
 .main-content {
   padding: 20px;
 }
+.fade-in-text {
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .info-section {
   margin-bottom: 20px;
@@ -17,6 +33,7 @@
   display: none;
   padding: 10px;
   background-color: #f9f9f9;
+
 }
 
 .accordion-item.active .accordion-content {
