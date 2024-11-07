@@ -3,45 +3,20 @@
   <p class="">Mira los proyectos que más éxito han tenido</p>
 
   <div class="row">
-    <div class="col-12">
+    <div class="col-12" *ngFor="let proyecto of proyectos">
       <div class="card-custom">
-        <img src="assets/proyecto/proyecto1.png" alt="">
+        <img
+          *ngIf="proyecto.imagen"
+          [src]="proyecto.imagen"
+          [alt]="proyecto.titulo">
+        <img
+          *ngIf="!proyecto.imagen"
+          src="assets/images/default-project-image.jpg"
+          [alt]="proyecto.titulo">
         <div class="card-body-custom">
-          <h5 class="card-title">Tu Barrio Innova</h5>
-          <p class="card-text">La Municipalidad Provincial de Trujillo (MPT), en el marco de generar una cultura de innovación,
-            a través de la Gerencia de Desarrollo Económico Local y la oficina de Innovación Municipal,
-            viene desarrollando ‘Tu Barrio Innova’, como parte de las actividades encaminadas a difundir,
-            sensibilizar y motivar la formación de vocaciones en ciencia, tecnología
-            e innovación tecnológica.</p>
-          <a href="https://www.gob.pe/institucion/munitrujillo/noticias/308698-villa-san-juan-emprende-proyectos-de-reciclaje" class="btn btn-warning">Ver más</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12">
-      <div class="card-custom">
-        <img src="assets/proyecto/proyecto2.png" alt="">
-        <div class="card-body-custom">
-          <h5 class="card-title">Expoagua</h5>
-          <p class="card-text">El sistema de reciclaje de agua para la siembra de plantas y verduras en un área común del colegio José Carlos Mariátegui, ubicado en el distrito de El Porvenir, en Trujillo,
-            ganó el IV Concurso Escolar Nacional Buenas prácticas para el ahorro del agua potable,
-            en la categoría Proyecto Innovador.</p>
-          <a href="https://andina.pe/agencia/noticia-escolares-trujillo-presentan-proyectos-reuso-agua-colegios-692481.aspx" class="btn btn-warning">Ver más</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12">
-      <div class="card-custom">
-        <img src="assets/proyecto/proyecto3.png" alt="">
-        <div class="card-body-custom">
-          <h5 class="card-title">Recolecc</h5>
-          <p class="card-text">Este 16 de mayo el Programa “Reciclamos para Dejar Huella” ha sido lanzado por Recolecc .
-            El objetivo principal de esta iniciativa es sensibilizar e involucrar a todas las empresas privadas,
-            públicas y hogares sobre la correcta gestión de los RAEE, con el fin de dar una nueva vida a los componentes aprovechables,
-            contribuyendo así a la disminución de la depredación de los recursos naturales y
-            a fomentar la economía circular en el Perú.</p>
-          <a href="https://www.businessempresarial.com.pe/reciclamos-para-dejar-huella-recolecc-lanza-programa-para-un-manejo-eficiente-de-residuos-electronicos-a-nivel-nacional/" class="btn btn-warning">Ver más</a>
+          <h5 class="card-title">{{proyecto.titulo}}</h5>
+          <p class="card-text">{{proyecto.descripcion}}</p>
+          <a [href]="proyecto.link" target="_blank" class="btn btn-warning">Ver más</a>
         </div>
       </div>
     </div>
