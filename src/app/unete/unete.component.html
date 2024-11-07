@@ -20,45 +20,52 @@
       <div class="col-lg-6 col-12">
         <h2 class="mb-4">UNETE A <span>NOSOTROS</span></h2>
 
-        <form class="contact-form me-lg-5 pe-lg-3" role="form">
+        <form [formGroup]="uneteForm" (ngSubmit)="onSubmit()" class="contact-form me-lg-5 pe-lg-3" role="form">
 
+          <!-- Campo Nombre -->
           <div class="form-floating">
-            <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
-
-            <label for="name">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" placeholder="Full name" required>
+            <label for="nombre">Nombre</label>
+            <div *ngIf="uneteForm.get('nombre')?.invalid && uneteForm.get('nombre')?.touched" class="text-danger">
+              El nombre es obligatorio.
+            </div>
           </div>
 
+          <!-- Campo Correo -->
           <div class="form-floating my-4">
-            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
-
-            <label for="email">Correo</label>
+            <input type="email" formControlName="correo" class="form-control" placeholder="Email address" required>
+            <label for="correo">Correo</label>
+            <div *ngIf="uneteForm.get('correo')?.invalid && uneteForm.get('correo')?.touched" class="text-danger">
+              Por favor ingresa un correo válido.
+            </div>
           </div>
 
+          <!-- Campo Número -->
           <div class="form-floating my-4">
-            <input type="subject" name="subject" id="subject"class="form-control" placeholder="Subject" required>
-
-            <label for="subject">Numero</label>
+            <input type="text" formControlName="numero" class="form-control" placeholder="Numero" required>
+            <label for="numero">Numero</label>
+            <div *ngIf="uneteForm.get('numero')?.invalid && uneteForm.get('numero')?.touched" class="text-danger">
+              El número es obligatorio.
+            </div>
           </div>
 
+          <!-- Botón Enviar -->
           <div class="col-lg-5 col-6">
-            <button type="submit" class="form-control color-change-button">Enviar</button>
+            <button type="submit" [disabled]="uneteForm.invalid" class="form-control color-change-button">Enviar</button>
           </div>
         </form>
+
       </div>
 
-
-
-
+      <!-- Información adicional -->
       <div class="col-6 contact-info">
         <h6 class="mb-3">UNETE A NUESTRA INICIATIVA</h6>
-
         <a href="mailto:studio@company.com" class="custom-link">
           Se te enviara toda la información al correo y numero registrado
           <i class="bi-arrow-right ms-2"></i>
         </a>
       </div>
-
-
     </div>
   </div>
 </section>
+
