@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {UneteService} from "../services/unete/unete.service";
 import {NgIf} from "@angular/common";
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-unete',
@@ -34,7 +36,13 @@ export class UneteComponent {
       // Si el formulario es válido, enviar los datos
       this.formularioService.enviarFormulario(this.uneteForm.value).subscribe(
         response => {
-          console.log('Formulario enviado con éxito', response);
+          Swal.fire({
+            title: '¡Gracias por unirte!',
+            text: 'Informarte sera un buen paso!',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+          })
+
         },
         error => {
           console.error('Error al enviar el formulario', error);
